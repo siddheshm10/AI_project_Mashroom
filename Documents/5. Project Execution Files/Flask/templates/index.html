@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Mushroom Classifier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+     
+      color: #222;
+    }
+
+    .main-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 40px;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      background-color: white;
+    }
+
+    .content {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .description {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .description strong {
+      font-weight: 600;
+    }
+
+    #predict_btn {
+      margin-top: 30px;
+      background: linear-gradient(to right, #4CAF50, #2E8B57);
+      color: white;
+      font-weight: bold;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      width: fit-content;
+    }
+
+    #predict_btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #2E8B57, #4CAF50);
+    }
+
+    .mushroom-image {
+      flex: 1;
+      max-width: 600px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-wrapper">
+    <div class="container">
+      <div class="content">
+        <h1>AI Mushroom Classification Project</h1>
+        <div class="description">
+          <h2>🌿 Uncovering the Hidden Treasures of the Mushroom Kingdom</h2>
+          <p>
+            "We will use this AI project to classify various types of mushrooms." <br><br>
+            Our AI model helps identify mushrooms as edible or poisonous based on their traits.
+            Perfect for nature lovers, foragers, and mushroom explorers!
+            <br><br>
+            Click the <strong>"Predict"</strong> button to begin the classification journey.
+          </p>
+        </div>
+        <a href="{{ url_for('predict_page') }}">
+          <button id="predict_btn">Predict</button>
+        </a>
+      </div>
+      <img src="https://images2.alphacoders.com/974/thumb-1920-974622.jpg" alt="Mushroom" class="mushroom-image" />
+    </div>
+  </div>
+</body>
+</html>
